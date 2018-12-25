@@ -1,0 +1,19 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id</mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="data">
+      <mat-header-cell *matHeaderCellDef> Usage </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.data}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef> Updated Date/Time  </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.time}} </mat-cell>
+    </ng-container>
+    
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
